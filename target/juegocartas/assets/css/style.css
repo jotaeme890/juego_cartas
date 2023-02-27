@@ -1,0 +1,193 @@
+/******************************************************************/
+/*                      Juego de cartas v1                        */
+/*           Hecho por: Javier Miguel Martín Gallardo             */
+/*                                                                */
+/******************************************************************/
+:root{
+    --principal:#F7F4F3;
+    --principal-contraste: #0a090c;
+    --fondo-principal: #BA8F95;
+}
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--principal);
+}
+
+
+/*********************** PRIMERA PANTALLA ***********************/
+
+#nombre{
+    text-align: center;
+    font-size: 2rem;
+    color: var(--principal-contraste);
+}
+
+.contenedorPrincipal{
+    height: 90vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedorJuego{
+    box-shadow: 1px 12px 31px -3px rgba(0,0,0,0.75);
+    display:flex;
+    flex-direction: column;
+    justify-content:space-between;
+    align-items: center;
+    height: 60%;
+    width: 40%;
+    border-radius: 2rem;
+    background-color: var(--principal);
+}
+
+#formulario{
+    display:flex;
+    height: 50%;
+    justify-content:space-between;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contenedorJuego label{
+    font-weight: bold;
+}
+
+.contenedorJuego input{
+    margin-bottom:10px;
+    font-weight: bold;
+}
+
+#jugar{
+    background:var(--principal-contraste);
+    color:var(--principal);
+    margin:2%;
+    border-radius:10px;
+    padding:10px;
+    height: 20%;
+    min-width:100px;
+    font-size:19px;
+}
+
+.contenedorReglas{
+    box-shadow: 1px 12px 31px -3px rgba(0,0,0,0.75);
+    width: 40%;
+    margin-left: 2%;
+    border-radius: 2rem;
+    background-color: var(--principal);
+}
+
+#tituloReglas{
+    margin-top: 3%;
+    text-align: center;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+
+.textoReglas{
+    text-indent: 2%;
+    text-align: justify;
+    color: rgb(0, 0, 0);
+    margin: 4%;
+    font-weight: bold;
+}
+
+
+/*********************** SEGUNDA PANTALLA **********************/
+.centro{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.horizontal{
+    justify-content:space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.vertical{
+    flex-direction: column;
+}
+
+.full{
+    width: 100%;
+    height: 100vh;
+    margin-top: -5%;
+}
+
+.carta{
+    padding:20px;
+}
+
+.mesa{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    justify-content:center;
+}
+
+.siguienteCarta{
+    background-color: var(--principal-contraste);
+}
+
+.ancho{
+    width: 100%
+}
+
+.comparador button{
+    background:var(--principal-contraste);
+    color:var(--principal);
+    border-radius:10px;
+    padding:10px;
+    height: 100%;
+    min-width:100px;
+    font-size:19px;
+}
+
+.fila{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+}
+
+.fila button{
+    background:var(--principal-contraste);
+    color:var(--principal);
+    border-radius:10px;
+    padding:10px;
+    height: 100%;
+    min-width:100px;
+    font-size:19px;
+    margin-left:4%;
+}
+
+/************************ MEDIA QUERY **************************/
+@media only screen and (width<=1200px) { 
+    #nombre{
+        font-size: 1.5rem;
+    }
+
+    img{
+        width: 90%;
+    }
+}
+
+@media only screen and (width<=1300px) { 
+    .mesa{
+        flex-direction: column;
+    }
+
+    .full{
+        margin-top: 5%;
+    }
+}
